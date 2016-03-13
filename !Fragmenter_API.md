@@ -67,7 +67,7 @@
 
 ## Get more fragments
 
-* GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken)&page=(pageNumber) will return 25 fragments on selected page:
+* GET https://fragmenter.net/api/v1/fragments/"groupID"?user_email="userEmail"&user_token="userToken"&page="pageNumber" will return 25 fragments on selected page:
 
 
 ```
@@ -94,7 +94,7 @@
 
 ## Report fragment 
 
-* POST https://fragmenter.net/api/v1/fragments/(fragmentId)/mark_inappropriate?user_email=(userEmail)&user_token=(userToken), with parameters: `{}` will return:
+* POST https://fragmenter.net/api/v1/fragments/"fragmentId"/mark_inappropriate?user_email="userEmail"&user_token="userToken", with parameters: `{}` will return:
 
 
 ```
@@ -106,7 +106,7 @@
 
 ## Block User
 
-* POST https://fragmenter.net/api/v1/user_relations?user_email=(userEmail)&user_token=(userToken), with parameters: `{"user_relation": {"relation_type": "ban", "to_id": (userId)}}` will return
+* POST https://fragmenter.net/api/v1/user_relations?user_email="userEmail"&user_token="userToken", with parameters: `{"user_relation": {"relation_type": "ban", "to_id": "userId"}}` will return
 
 
 ```
@@ -124,7 +124,7 @@
 
 ## Send new fragment
 
-* POST https://fragmenter.net/api/v1/fragments/?user_email=(userEmail)&user_token=(userToken), with parameters:  `{"fragment":{"body":(fragmentBodyText), "mood":(mood), "visibility": (visibility)}}` will return:
+* POST https://fragmenter.net/api/v1/fragments/?user_email="userEmail"&user_token="userToken", with parameters:  `{"fragment":{"body":"fragmentBodyText", "mood":(mood), "visibility": "visibility"}}` will return:
 
 ```
 {
