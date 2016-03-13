@@ -1,4 +1,7 @@
-GET /locations/64/absence_types.json will return all absence_types
+# GET /locations/64/absence_types.json will return all absence_types
+
+
+```
 [
   {
     "created_at": "2012-09-17T23:03:55+02:00",
@@ -12,3 +15,5 @@ GET /locations/64/absence_types.json will return all absence_types
     "include_weekends": true
   }
 ]
+
+```
