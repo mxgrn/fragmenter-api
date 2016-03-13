@@ -36,13 +36,6 @@
 
 * GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken)  will return 25 fragments:
 
-###### GroupID can be:
-1. "all"
-2. "own"
-3. "top"
-4. "interesting"
-5. "favorite"
-6. "banned"
 
 ```
 {
@@ -63,11 +56,19 @@
 }   
 ``` 
 
+###### GroupID can be:
+1. "all"
+2. "own"
+3. "top"
+4. "interesting"
+5. "favorite"
+6. "banned"
+
+
 ## Get more fragments
 
 * GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken)&page=(pageNumber) will return 25 fragments on selected page:
 
-###### GroupIDs same as in Get fragments call.
 
 ```
 {
@@ -87,6 +88,8 @@
 	]
 }
 ``` 
+
+###### GroupIDs same as in Get fragments call.
 
 
 
