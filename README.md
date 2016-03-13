@@ -1,2 +1,2 @@
 # fragmenter-api
-API documentation for fragmenter.net
+API documentation for http://fragmenter.net
