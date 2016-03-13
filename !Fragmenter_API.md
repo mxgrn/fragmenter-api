@@ -1,6 +1,6 @@
 ## Authorization 
 
-* POST https://fragmenter.net/api/v1/authenticate with parameters `{"email": "examplemail@yahoo.com", "password": "examplePassword"}` will return:
+* POST https://fragmenter.net/api/v1/authenticate, with parameters: `{"email": "examplemail@yahoo.com", "password": "examplePassword"}` will return:
 
 
 ```
@@ -34,7 +34,7 @@
 
 ## Get fragments
 
-* GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken)  will return 25 fragments:
+* GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken) will return 25 fragments:
 
 
 ```
@@ -94,7 +94,7 @@
 
 ## Report fragment 
 
-* POST https://fragmenter.net/api/v1/fragments/(fragmentId)/mark_inappropriate?user_email=(userEmail)&user_token=(userToken) with parameters `{}` will return:
+* POST https://fragmenter.net/api/v1/fragments/(fragmentId)/mark_inappropriate?user_email=(userEmail)&user_token=(userToken), with parameters: `{}` will return:
 
 
 ```
@@ -106,10 +106,50 @@
 
 ## Block User
 
-* POST https://fragmenter.net/api/v1/user_relations?user_email=(userEmail)&user_token=(userToken) with parameters `{"user_relation": {"relation_type": "ban", "to_id": self.usersIdFporBan}}` will return"
+* POST https://fragmenter.net/api/v1/user_relations?user_email=(userEmail)&user_token=(userToken), with parameters: `{"user_relation": {"relation_type": "ban", "to_id": (userId)}}` will return
+
+
+```
+{
+    "created_at" = "2016-03-13T05:23:23.400Z";
+    id = 32870;
+    "relation_type" = ban;
+    "to_id" = 19407;
+    "updated_at" = "2016-03-13T05:23:23.400Z";
+    "user_id" = 15629;
+}
+``` 
 
 
 
+## Send new fragment
+
+* POST https://fragmenter.net/api/v1/fragments/?user_email=(userEmail)&user_token=(userToken), with parameters:  `{"fragment":{"body":(fragmentBodyText), "mood":(mood), "visibility": (visibility)}}` will return:
+
+```
+{
+    data =     {
+        attributes =         {
+            body = T;
+            "created_at" = "2016-03-13T05:25:35.369Z";
+            language = en;
+            mood = 1;
+            "user_id" = 15629;
+            "user_name" = TestUser;
+        };
+        id = 134152;
+        type = fragments;
+    };
+}
+``` 
+
+###### Mood can be from -3 to 3, or null
+
+###### Visibility can be:
+
+1. "pub", means All
+2. "prv", means Nobody
+3. "prt", means Top
 
 
 
