@@ -34,7 +34,7 @@
 
 ## Get fragments
 
-* GET https://fragmenter.net/api/v1/fragments/<groupID>?user_email=<userEmail>&user_token=<userToken>  will return 25 fragments:
+* GET https://fragmenter.net/api/v1/fragments/**groupID**?user_email=**userEmail**&user_token=**userToken**  will return 25 fragments:
 
 ###### GroupID can be:
 1. "all"
