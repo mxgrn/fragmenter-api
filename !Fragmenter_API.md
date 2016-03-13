@@ -44,7 +44,7 @@
       "id": "134145",
       "type": "fragments",
       "attributes":  {
-        "body": "× Вечером иду в душ и спать. Сплю на боку, так получается. И поэтому пробор съезжает на бок и так и остается. Это иногда дико раздражает, т.к. изменить ничего не получается, а так - прикольно :'D\n× Завтра будет тяжёлый день. До шк - тест по физике, потом кр по физике, всякие проверочные, и после шк - кр по истории. Зато в 3 часа дня уже буду свободна. Хах. Неделя до конца четверти. Я справлюсь.\n× Ощущение лета. Хочется тепла, дождей, зелени. В моем воображении это все уже есть ^ ^ Скоро и в реальности будет. Стоп. Там все еще снег.. Замечталась > <",
+        "body": "\U0411\U0440\U043e \U043c\U043d\U0435 \U0441\U043a\U0438\U043d\U0443\U043b\U0430 \U043a\U0443\U0447\U0443 \U0441\U0442\U0430\U0440\U044b\U0445 \U0444\U043e\U0442\U043e\U0433\U0440\U0430\U0444\U0438\U0439. \n\U041d\U043e\U0441\U0442\U0430\U043b\U044c\U0433\U0438\U044f \U043d\U0430\U043a\U0440\U044b\U043b\U0430. \U042f \U0431\U044b\U043b \U0441\U043e\U0432\U0441\U0435\U043c \U0434\U0440\U0443\U0433\U043e\U0439. \n\U041d\U043e\U0441\U0438\U043b \U044d\U0442\U0438 \U0446\U0432\U0435\U0442\U043d\U044b\U0435 \U043b\U0435\U043d\U0442\U044b \U043d\U0430 \U0440\U0443\U043a\U0430\U0445, \U0434\U0440\U0443\U0433\U0438\U0435 \U043e\U0447\U043a\U0438, \U0434\U0440\U0443\U0433\U0430\U044f \U043f\U0440\U0438\U0447\U0451\U0441\U043a\U0430, \U0440\U043e\U0446\U043a \U044d\U0442\U043e\U0442 \U0441\U043b\U0443\U0448\U0430\U043b.\n\U0410 \U0441\U0435\U0439\U0447\U0430\U0441 \U0432\U0441\U0451 \U043d\U0435 \U0442\U0430\U043a..",
         "mood": null,
         "language": "ru",
         "user_name": "Sea",
@@ -65,7 +65,8 @@
 6. "banned"
 
 
-## Get more fragments
+
+## Get more fragments. For infinite scrolling
 
 * GET https://fragmenter.net/api/v1/fragments/"groupID"?user_email="userEmail"&user_token="userToken"&page="pageNumber" will return 25 fragments on selected page:
 
@@ -77,7 +78,7 @@
       "id": "134119",
       "type": "fragments",
       "attributes":  {
-        "body": "через месяц уедет Б, еще через месяц приедут предки, а месяц спустя начнется сессия. фантастика. а февраль вышел что надо.\nзато сейчас тепло и ночью так классно пахнет воздух - лучшее время суток.\nжизнь последнее время так прикольно меняется.\nесть радостное желание съесть морковку.\nмяу",
+        "body": "\U0411\U0440\U043e \U043c\U043d\U0435 \U0441\U043a\U0438\U043d\U0443\U043b\U0430 \U043a\U0443\U0447\U0443 \U0441\U0442\U0430\U0440\U044b\U0445 \U0444\U043e\U0442\U043e\U0433\U0440\U0430\U0444\U0438\U0439. \n\U041d\U043e\U0441\U0442\U0430\U043b\U044c\U0433\U0438\U044f \U043d\U0430\U043a\U0440\U044b\U043b\U0430. \U042f \U0431\U044b\U043b \U0441\U043e\U0432\U0441\U0435\U043c \U0434\U0440\U0443\U0433\U043e\U0439. \n\U041d\U043e\U0441\U0438\U043b \U044d\U0442\U0438 \U0446\U0432\U0435\U0442\U043d\U044b\U0435 \U043b\U0435\U043d\U0442\U044b \U043d\U0430 \U0440\U0443\U043a\U0430\U0445, \U0434\U0440\U0443\U0433\U0438\U0435 \U043e\U0447\U043a\U0438, \U0434\U0440\U0443\U0433\U0430\U044f \U043f\U0440\U0438\U0447\U0451\U0441\U043a\U0430, \U0440\U043e\U0446\U043a \U044d\U0442\U043e\U0442 \U0441\U043b\U0443\U0448\U0430\U043b.\n\U0410 \U0441\U0435\U0439\U0447\U0430\U0441 \U0432\U0441\U0451 \U043d\U0435 \U0442\U0430\U043a..",
         "mood": null,
         "language": "ru",
         "user_name": "михаль север",
@@ -90,6 +91,31 @@
 ``` 
 
 ###### GroupIDs same as in Get fragments call.
+
+
+
+## Get fragments before your current 25 fragments. For infinite scrolling
+
+* GET https://fragmenter.net/api/v1/fragments/"groupId"?user_email="email"&user_token="token"&before_id="lastCurrentFragmentID", will return 25 fragments:
+
+```
+[{
+    attributes =     {
+        body = "\U0411\U0440\U043e \U043c\U043d\U0435 \U0441\U043a\U0438\U043d\U0443\U043b\U0430 \U043a\U0443\U0447\U0443 \U0441\U0442\U0430\U0440\U044b\U0445 \U0444\U043e\U0442\U043e\U0433\U0440\U0430\U0444\U0438\U0439. \n\U041d\U043e\U0441\U0442\U0430\U043b\U044c\U0433\U0438\U044f \U043d\U0430\U043a\U0440\U044b\U043b\U0430. \U042f \U0431\U044b\U043b \U0441\U043e\U0432\U0441\U0435\U043c \U0434\U0440\U0443\U0433\U043e\U0439. \n\U041d\U043e\U0441\U0438\U043b \U044d\U0442\U0438 \U0446\U0432\U0435\U0442\U043d\U044b\U0435 \U043b\U0435\U043d\U0442\U044b \U043d\U0430 \U0440\U0443\U043a\U0430\U0445, \U0434\U0440\U0443\U0433\U0438\U0435 \U043e\U0447\U043a\U0438, \U0434\U0440\U0443\U0433\U0430\U044f \U043f\U0440\U0438\U0447\U0451\U0441\U043a\U0430, \U0440\U043e\U0446\U043a \U044d\U0442\U043e\U0442 \U0441\U043b\U0443\U0448\U0430\U043b.\n\U0410 \U0441\U0435\U0439\U0447\U0430\U0441 \U0432\U0441\U0451 \U043d\U0435 \U0442\U0430\U043a..";
+        "created_at" = "2016-03-13T01:19:26.525Z";
+        language = ru;
+        mood = 0;
+        "user_id" = 16547;
+        "user_name" = "Darth pidor";
+    };
+    id = 134131;
+    type = fragments;
+}]
+``` 
+
+###### GroupIDs same as in Get fragments call.
+###### lastCurrentFragmentID is ID of last of your current fragments
+
 
 
 ## Report fragment 
@@ -121,7 +147,8 @@
 ``` 
 
 
-## Send new fragment
+
+## Post new fragment
 
 * POST https://fragmenter.net/api/v1/fragments/?user_email="userEmail"&user_token="userToken", with parameters:  `{"fragment":{"body":"fragmentBodyText", "mood":(mood), "visibility": "visibility"}}` will return:
 
@@ -155,10 +182,6 @@
 ## Time of last user's fragment
 
 ###### Fragmenter API don't have specific call to get time of last user's fragment. I am using GET https://fragmenter.net/api/v1/fragments/own?user_email="userEmail"&user_token="userToken" and take time of last user's fragment from it.
-
-
-
-
 
 
 
