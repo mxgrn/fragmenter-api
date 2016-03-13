@@ -92,6 +92,22 @@
 ###### GroupIDs same as in Get fragments call.
 
 
+## Report fragment 
+
+* POST https://fragmenter.net/api/v1/fragments/(fragmentId)/mark_inappropriate?user_email=(userEmail)&user_token=(userToken) with parameters `{}` will return:
+
+
+```
+{
+  "success": true
+}
+``` 
+
+
+## Block User
+
+* POST https://fragmenter.net/api/v1/user_relations?user_email=(userEmail)&user_token=(userToken) with parameters `{"user_relation": {"relation_type": "ban", "to_id": self.usersIdFporBan}}` will return"
+
 
 
 
