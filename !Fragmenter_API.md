@@ -1,4 +1,6 @@
-# GET /locations/64/absence_types.json will return all absence_types
+## Name 
+###### Functional
+* Something else
 
 
 ```
