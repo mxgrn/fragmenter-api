@@ -154,7 +154,7 @@
 
 ## Time of last user's fragment
 
-###### Fragmenter API don't have specific call to get time of last user's fragment. I am using GET https://fragmenter.net/api/v1/fragments/own?user_email="userEmail"&user_token="userToken" and take time of last user's fragment from it
+###### Fragmenter API don't have specific call to get time of last user's fragment. I am using GET https://fragmenter.net/api/v1/fragments/own?user_email="userEmail"&user_token="userToken" and take time of last user's fragment from it.
 
 
 
