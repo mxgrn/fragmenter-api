@@ -62,3 +62,41 @@
     ]
 }   
 ``` 
+
+## Get more fragments
+
+* GET https://fragmenter.net/api/v1/fragments/(groupID)?user_email=(userEmail)&user_token=(userToken)&page=(pageNumber) will return 25 fragments on selected page:
+
+###### GroupIDs same as in Get fragments call.
+
+```
+{
+  "data":  [
+     {
+      "id": "134119",
+      "type": "fragments",
+      "attributes":  {
+        "body": "через месяц уедет Б, еще через месяц приедут предки, а месяц спустя начнется сессия. фантастика. а февраль вышел что надо.\nзато сейчас тепло и ночью так классно пахнет воздух - лучшее время суток.\nжизнь последнее время так прикольно меняется.\nесть радостное желание съесть морковку.\nмяу",
+        "mood": null,
+        "language": "ru",
+        "user_name": "михаль север",
+        "user_id": 19461,
+        "created_at": "2016-03-12T23:16:51.068Z"
+      }
+    }
+	]
+}
+``` 
+
+
+
+
+
+
+
+
+
+
+
+
+
