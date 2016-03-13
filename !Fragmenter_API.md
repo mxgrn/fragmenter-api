@@ -3,40 +3,6 @@
 * POST https://fragmenter.net/api/v1/authenticate with parameters `{"email": "examplemail@yahoo.com", "password": "examplePassword"}` will return:
 
 
-HTTP/1.1 200 OK
-X-Runtime:
-0.097324
-ETag:
-"01ea343088f7c50997ff92884d45b385"
-X-XSS-Protection:
-1; mode=block
-X-Request-Id:
-b73c6031-2a64-4176-b04c-5d1e0a9b56fa
-Connection:
-keep-alive
-Server:
-nginx/1.8.0 + Phusion Passenger 5.0.21
-X-Powered-By:
-Phusion Passenger 5.0.21
-X-Content-Type-Options:
-nosniff
-Cache-Control:
-max-age=0, private, must-revalidate
-Status:
-200 OK
-X-Frame-Options:
-SAMEORIGIN
-Strict-Transport-Security:
-max-age=31536000
-Date:
-Sun, 13 Mar 2016 04:23:16 GMT
-Transfer-Encoding:
-chunked
-Content-Type:
-application/json; charset=utf-8
-
-
-
 ```
 {
   "id": 15629,
@@ -61,3 +27,38 @@ application/json; charset=utf-8
   "authentication_token": "Z9tvm5kDR7ot_Up4nwGF"
 }
 ```
+
+###### You want to save "authentication_token" and "email", later you will need them for the following calls.
+
+
+
+## Get fragments
+
+* GET https://fragmenter.net/api/v1/fragments/<groupID>?user_email=<userEmail>&user_token=<userToken>  will return 25 fragments:
+
+###### GroupID can be:
+1. "all"
+2. "own"
+3. "top"
+4. "interesting"
+5. "favorite"
+6. "banned"
+
+```
+{
+  "data":  [
+     {
+      "id": "134145",
+      "type": "fragments",
+      "attributes":  {
+        "body": "× Вечером иду в душ и спать. Сплю на боку, так получается. И поэтому пробор съезжает на бок и так и остается. Это иногда дико раздражает, т.к. изменить ничего не получается, а так - прикольно :'D\n× Завтра будет тяжёлый день. До шк - тест по физике, потом кр по физике, всякие проверочные, и после шк - кр по истории. Зато в 3 часа дня уже буду свободна. Хах. Неделя до конца четверти. Я справлюсь.\n× Ощущение лета. Хочется тепла, дождей, зелени. В моем воображении это все уже есть ^ ^ Скоро и в реальности будет. Стоп. Там все еще снег.. Замечталась > <",
+        "mood": null,
+        "language": "ru",
+        "user_name": "Sea",
+        "user_id": 18774,
+        "created_at": "2016-03-13T04:25:41.497Z"
+      }
+    }
+    ]
+}   
+``` 
