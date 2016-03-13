@@ -121,7 +121,6 @@
 ``` 
 
 
-
 ## Send new fragment
 
 * POST https://fragmenter.net/api/v1/fragments/?user_email="userEmail"&user_token="userToken", with parameters:  `{"fragment":{"body":"fragmentBodyText", "mood":(mood), "visibility": "visibility"}}` will return:
@@ -150,6 +149,12 @@
 1. "pub", means All
 2. "prv", means Nobody
 3. "prt", means Top
+
+
+
+## Time of last user's fragment
+
+###### Fragmenter API don't have specific call to get time of last user's fragment. I am using GET https://fragmenter.net/api/v1/fragments/own?user_email="userEmail"&user_token="userToken" and take time of last user's fragment from it
 
 
 
