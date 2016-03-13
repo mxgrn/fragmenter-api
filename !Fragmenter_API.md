@@ -1,6 +1,6 @@
-## Name 
-###### Functional
-* Something else
+## Authorization 
+
+* POST https://fragmenter.net/api/v1/authenticate with parameters `["email": "examplemail@yahoo.com", "password": "examplePassword"]` will return:
 
 
 ```
