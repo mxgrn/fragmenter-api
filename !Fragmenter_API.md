@@ -162,13 +162,13 @@
     	"id": "134152",
         "type": "fragments",
         "attributes":  {
-            "body": "Test text",
-        	"mood": 1,
-            "language": "en",
-            "user_name": "TestUser",
-            "user_id": 15629,
-            "created_at": "2016-03-13T05:25:35.369Z"
-        }
+         "body": "Test text",
+         "mood": 1,
+         "language": "en",
+         "user_name": "TestUser",
+         "user_id": 15629,
+         "created_at": "2016-03-13T05:25:35.369Z"
+       }
     }
 }
 ``` 
