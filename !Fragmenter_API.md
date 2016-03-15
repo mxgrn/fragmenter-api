@@ -99,18 +99,22 @@
 * GET https://fragmenter.net/api/v1/fragments/groupId?user_email=exampleEmail&user_token=exampleToken&before_id=lastCurrentFragmentID, will return 25 fragments:
 
 ```
-[{
-    attributes =     {
-        body = "some text here...";
-        "created_at" = "2016-03-13T01:19:26.525Z";
-        language = ru;
-        mood = 0;
-        "user_id" = 16547;
-        "user_name" = "Darth pidor";
-    };
-    id = 134131;
-    type = fragments;
-}]
+{
+  "data":  [
+     {
+      "id": "134131",
+      "type": "fragments",
+      "attributes":  {
+        "body": "some text here...",
+        "mood": 0,
+        "language": "ru",
+        "user_name": "Darth pidor",
+        "user_id": 16547,
+        "created_at": "2016-03-13T01:19:26.525Z"
+      }
+    }
+	]
+}
 ``` 
 
 ###### GroupIDs same as in Get fragments call.
@@ -137,12 +141,12 @@
 
 ```
 {
-    "created_at" = "2016-03-13T05:23:23.400Z";
-    id = 32870;
-    "relation_type" = ban;
-    "to_id" = 19407;
-    "updated_at" = "2016-03-13T05:23:23.400Z";
-    "user_id" = 15629;
+    "created_at" = "2016-03-13T05:23:23.400Z",
+    "id" = 32870,
+    "relation_type" = "ban",
+    "to_id" = 19407,
+    "updated_at" = "2016-03-13T05:23:23.400Z",
+    "user_id" = 15629,
 }
 ``` 
 
@@ -154,18 +158,18 @@
 
 ```
 {
-    data =     {
-        attributes =         {
-            body = T;
-            "created_at" = "2016-03-13T05:25:35.369Z";
-            language = en;
-            mood = 1;
-            "user_id" = 15629;
-            "user_name" = TestUser;
-        };
-        id = 134152;
-        type = fragments;
-    };
+    "data" =  {
+        "attributes" =  {
+            "body" = "Test text",
+            "created_at" = "2016-03-13T05:25:35.369Z",
+            "language" = "en",
+            "mood" = 1,
+            "user_id" = 15629,
+            "user_name" = TestUser,
+        },
+        "id" = 134152,
+        "type: = "fragments",
+    },
 }
 ``` 
 
