@@ -159,6 +159,8 @@
 ```
 {
     "data" =  {
+    	"id" = 134152,
+        "type": = "fragments",
         "attributes" =  {
             "body" = "Test text",
             "created_at" = "2016-03-13T05:25:35.369Z",
@@ -166,9 +168,7 @@
             "mood" = 1,
             "user_id" = 15629,
             "user_name" = "TestUser",
-        },
-        "id" = 134152,
-        "type: = "fragments",
+        }
     }
 }
 ``` 
