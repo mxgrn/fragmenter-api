@@ -141,12 +141,12 @@
 
 ```
 {
-    "id": "32870",
-	"user_id": 15629,
-    "relation_type": "ban",
-    "to_id": 19407,
-    "created_at": "2016-03-13T05:23:23.400Z",
-    "updated_at": "2016-03-13T05:23:23.400Z"
+  "id": "32870",
+  "user_id": 15629,
+  "relation_type": "ban",
+  "to_id": 19407,
+  "created_at": "2016-03-13T05:23:23.400Z",
+  "updated_at": "2016-03-13T05:23:23.400Z"
 }
 ``` 
 
@@ -158,18 +158,18 @@
 
 ```
 {
-    "data":  {
-    	"id": "134152",
-        "type": "fragments",
-        "attributes":  {
-         "body": "Test text",
-         "mood": 1,
-         "language": "en",
-         "user_name": "TestUser",
-         "user_id": 15629,
-         "created_at": "2016-03-13T05:25:35.369Z"
-       }
-    }
+  "data":  {
+      "id": "134152",
+      "type": "fragments",
+      "attributes":  {
+        "body": "Test text",
+        "mood": 1,
+        "language": "en",
+        "user_name": "TestUser",
+        "user_id": 15629,
+        "created_at": "2016-03-13T05:25:35.369Z"
+      }
+   }
 }
 ``` 
 
