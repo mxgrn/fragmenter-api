@@ -96,7 +96,7 @@
 
 ## Get fragments before your current 25 fragments. For infinite scrolling
 
-* GET https://fragmenter.net/api/v1/fragments/exampleGroupId?user_email=exampleEmail&user_token=exampleToken&before_id=lastCurrentFragmentID, will return 25 fragments:
+* GET https://fragmenter.net/api/v1/fragments/groupId?user_email=exampleEmail&user_token=exampleToken&before_id=lastCurrentFragmentID, will return 25 fragments:
 
 ```
 [{
