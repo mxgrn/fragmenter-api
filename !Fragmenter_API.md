@@ -39,11 +39,11 @@
 
 ```
 {
-  "data":  [
+  "data": [
      {
       "id": "134145",
       "type": "fragments",
-      "attributes":  {
+      "attributes": {
         "body": "some text here...",
         "mood": null,
         "language": "ru",
@@ -73,11 +73,11 @@
 
 ```
 {
-  "data":  [
+  "data": [
      {
       "id": "134119",
       "type": "fragments",
-      "attributes":  {
+      "attributes": {
         "body": "some text here...",
         "mood": null,
         "language": "ru",
@@ -100,11 +100,11 @@
 
 ```
 {
-  "data":  [
+  "data": [
      {
       "id": "134131",
       "type": "fragments",
-      "attributes":  {
+      "attributes": {
         "body": "some text here...",
         "mood": 0,
         "language": "ru",
@@ -158,10 +158,10 @@
 
 ```
 {
-  "data":  {
+  "data": {
       "id": "134152",
       "type": "fragments",
-      "attributes":  {
+      "attributes": {
         "body": "Test text",
         "mood": 1,
         "language": "en",
