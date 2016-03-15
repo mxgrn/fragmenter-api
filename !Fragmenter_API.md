@@ -165,7 +165,7 @@
             "language" = "en",
             "mood" = 1,
             "user_id" = 15629,
-            "user_name" = TestUser,
+            "user_name" = "TestUser",
         },
         "id" = 134152,
         "type: = "fragments",
