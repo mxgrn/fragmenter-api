@@ -1,4 +1,4 @@
-## Authorization 
+## Authorization
 
 * POST https://fragmenter.net/api/v1/authenticate, with parameters: `{"email": "examplemail@yahoo.com", "password": "examplePassword"}` will return:
 
@@ -53,8 +53,8 @@
       }
     }
     ]
-}   
-``` 
+}
+```
 
 ###### GroupID can be:
 1. "all"
@@ -86,9 +86,9 @@
         "created_at": "2016-03-12T23:16:51.068Z"
       }
     }
-	]
+  ]
 }
-``` 
+```
 
 ###### GroupIDs same as in Get fragments call.
 
@@ -113,16 +113,16 @@
         "created_at": "2016-03-13T01:19:26.525Z"
       }
     }
-	]
+  ]
 }
-``` 
+```
 
 ###### GroupIDs same as in Get fragments call.
 ###### lastCurrentFragmentID is ID of last of your current fragments
 
 
 
-## Report fragment 
+## Report fragment
 
 * POST https://fragmenter.net/api/v1/fragments/exampleFragmentId/mark_inappropriate?user_email=exampleEmail&user_token=exampleToken, with parameters: `{}` will return:
 
@@ -131,7 +131,7 @@
 {
   "success": true
 }
-``` 
+```
 
 
 ## Block User
@@ -148,7 +148,7 @@
   "created_at": "2016-03-13T05:23:23.400Z",
   "updated_at": "2016-03-13T05:23:23.400Z"
 }
-``` 
+```
 
 
 
@@ -171,7 +171,7 @@
       }
    }
 }
-``` 
+```
 
 ###### Mood can be from -3 to 3, or null
 
@@ -181,7 +181,36 @@
 2. "prv", means Nobody
 3. "prt", means Top
 
+## Bookmarking a fragment
 
+Allows bookmarking a fragment with given ID for current user.
+
+    POST https://fragmenter.net/api/v1/favorite_assignments/?user_email=exampleEmail&user_token=exampleToken
+
+Params:
+
+    {
+      favorite_assignment:
+        {
+          fragment_id: 1
+        }
+      }
+    }
+
+Returns:
+
+    {
+        "object": {
+            "created_at": "2016-04-16T08:38:17.188Z",
+            "fragment_id": 1,
+            "id": 1,
+            "updated_at": "2016-04-16T08:38:17.188Z",
+            "user_id": 2
+        },
+        "instance_options": {},
+        "root": null,
+        "scope": null
+    }
 
 ## Time of last user's fragment
 
