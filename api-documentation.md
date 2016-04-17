@@ -34,7 +34,7 @@
 
 ## Get fragments
 
-* GET https://fragmenter.net/api/v1/fragments/groupID?user_email=exampleEmail&user_token=exampleToken will return 25 fragments:
+* GET https://fragmenter.net/api/v1/fragments/FEED?user_email=exampleEmail&user_token=exampleToken will return 25 fragments:
 
 
 ```
@@ -49,22 +49,25 @@
         "language": "ru",
         "user_name": "Sea",
         "user_id": 18774,
+        "favorite_assignment_id": 12345,
         "created_at": "2016-03-13T04:25:41.497Z"
       }
     }
-    ]
+  ]
 }
 ```
 
-###### GroupID can be:
+###### FEED can be:
+
 1. "all"
 2. "own"
-3. "top"
-4. "interesting"
+3. "best"
+4. "good"
 5. "favorite"
 6. "banned"
 
-
+Fragments marked as "saved" have favorite_assignment_id set to non-nil value. Use this value to remove the assignment
+(see below).
 
 ## Get more fragments. For infinite scrolling
 
@@ -181,9 +184,9 @@
 2. "prv", means Nobody
 3. "prt", means Top
 
-## Bookmarking a fragment
+## Saving fragments (bookmarks/favorites)
 
-Allows bookmarking a fragment with given ID for current user.
+### Saving a fragment with given ID for current user
 
     POST https://fragmenter.net/api/v1/favorite_assignments/?user_email=exampleEmail&user_token=exampleToken
 
@@ -212,11 +215,17 @@ Returns:
         "scope": null
     }
 
-## Time of last user's fragment
+### Removing bookmark
 
-###### Fragmenter API don't have specific call to get time of last user's fragment. I am using GET https://fragmenter.net/api/v1/fragments/own?user_email=exampleEmail&user_token=exampleToken and take time of last user's fragment from it.
+    DELETE https://fragmenter.net/api/v1/favorite_assignments/ID?user_email=exampleEmail&user_token=exampleToken
 
+... where ID is taken either 1) from "favorite_assignment_id" passed along with a fragment (see above), or 2) as "id" when
+bookmarking a fragment.
 
+## Getting time of last user's fragment
 
+###### Fragmenter API don't have specific call to get time of last user's fragment. Use
 
+    GET https://fragmenter.net/api/v1/fragments/own?user_email=exampleEmail&user_token=exampleToken
 
+to receive user's fragments, and take time of last one from it.
