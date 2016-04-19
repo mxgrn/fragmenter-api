@@ -203,17 +203,14 @@ Params:
 Returns:
 
     {
-        "object": {
-            "created_at": "2016-04-16T08:38:17.188Z",
-            "fragment_id": 1,
-            "id": 1,
-            "updated_at": "2016-04-16T08:38:17.188Z",
-            "user_id": 2
-        },
-        "instance_options": {},
-        "root": null,
-        "scope": null
+      "created_at": "2016-04-16T08:38:17.188Z",
+      "fragment_id": 1,
+      "id": 1,
+      "updated_at": "2016-04-16T08:38:17.188Z",
+      "user_id": 2
     }
+  
+    ("id" is a new favorite assignment id)
 
 ### Removing bookmark
 
